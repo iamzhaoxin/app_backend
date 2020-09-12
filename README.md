@@ -4,7 +4,7 @@
 ## 学习目标
 [实现前端功能设计](/api_design.md)  
 [数据库设计]()（未完成）
-
+[大事记](/Memorabilia.md)
 ## 学习内容
 + `GitHub`&`git`的使用
 + *Python*后端开发
