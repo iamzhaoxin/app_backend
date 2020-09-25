@@ -11,6 +11,19 @@
 + *Python*后端开发
 + 前后端交互
 
+## 新设备部署
+1. git clone
+
+2. 新建文件`/venv/pyvenv.cfg`，内容为
+    ```
+    home = D:\tools\Python38	#改为当前python安装路径
+    include-system-site-packages = false
+    version = 3.8.0
+    ```
+3. 自己探索？
+
+
+
 ## 开发流程
 1. 本地dev分支修改代码
 2. push到远程dev分支  
