@@ -14,7 +14,7 @@
 ## 新设备部署
 1. git clone
 
-2. 新建文件`/venv/pyvenv.cfg`，内容为
+2. 修改文件`/venv/pyvenv.cfg`，内容为
     ```
     home = D:\tools\Python38	#改为当前python安装路径
     include-system-site-packages = false

@@ -1,7 +1,0 @@
-/pyvenv.cfg
-#/venv/pyvenv.cfg:
-#文件中的内容：
-#新建文件，修改home路径为当前机器的python路径
-#home = D:\tools\Python38
-#include-system-site-packages = false
-#version = 3.8.0
