@@ -1,5 +1,6 @@
 import datetime
 import json
+import os
 
 from django.http import HttpResponse
 from django.shortcuts import render
@@ -21,4 +22,4 @@ def hello(request):
         res = ['Hi~', name]
     else:
         res = 'Hi~,you are using "get" to visit this website'
-    return HttpResponse((dres + res))  # json.dumps(res) : 返回json格式
+    return HttpResponse((dres + str(res)))  # json.dumps(res) : 返回json格式
