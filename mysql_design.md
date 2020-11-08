@@ -6,5 +6,5 @@ User
 |  密码  | string |     长度限制（字符检查？）      |
 | 用户名 | string |     长度限制（字符检查？）      |
 |  头像  | string |        图片对应存储地址         |
-|  身份  |  int   | eg:  1_teacher; 2_student; 3_…… |
+|  身份  |  string   | eg:  teacher; student; …… |
 

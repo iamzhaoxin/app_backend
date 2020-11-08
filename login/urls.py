@@ -1,7 +1,8 @@
 from django.urls import path
 
-from login.views import test_image
+from login.views import registered, login
 
 urlpatterns = [
-    path('test/', test_image),
+    path('registered/', registered),
+    path('',login),
 ]
