@@ -14,13 +14,17 @@
 ## 新设备部署
 1. git clone
 
-2. 修改文件`/venv/pyvenv.cfg`，内容为
+2. git config --global http.https://github.com.proxy socks5://127.0.0.1:7890
+
+3. 修改文件`/venv/pyvenv.cfg`，内容为
     ```
-    home = D:\tools\Python38	#改为当前python安装路径
+    home = D:\tools\Python38	#改为当前python安装路径(这个注释要删掉！)
     include-system-site-packages = false
     version = 3.8.0
     ```
-3. 自己探索？
+4. 文件-设置-项目-Python解释器-选择venv文件夹里Scripts文件夹里的python.exe文件
+
+5. 右上角添加Django服务器配置
 
 
 
