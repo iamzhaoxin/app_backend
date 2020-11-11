@@ -1,15 +1,21 @@
+import json
 import os
+
 
 from django.http import HttpResponse
 from django.shortcuts import render
 
 # Create your views here.
-from login.models import User
+from login.models import User, Info
 
 
 def registered(request):
+    res = HttpResponse()
+
     if not request.method == "POST":
-        return HttpResponse('-1')  # 未使用POST访问
+        res.status_code = 400
+        res.content = '-1'  # 未使用POST访问
+        return res
 
     id = request.POST.get('id')
     name = request.POST.get('name')
@@ -17,11 +23,21 @@ def registered(request):
     img = request.FILES.get('file')
     identity = request.POST.get('identity')
 
-    if User.objects.filter(id__exact=id):
-        return HttpResponse('1')  # 用户id已被注册
+    a = Info(id)
+
+    if a.status == 1:
+        res.status_code = 400
+        res.content = '1'  # id已被注册
+        return res
     else:
         User.objects.create(id=id, name=name, password=password, image_path=img, identity=identity)
-        return HttpResponse('0')  # 注册成功
+        res.status_code = 200
+        res.content_type = "application/json"
+        res.content = json.dumps(a.get_info())
+        return res
+
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# 后面还没有重写
 
 
 def login(request):
