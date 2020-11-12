@@ -12,17 +12,17 @@ class User(models.Model):
     identity = models.CharField(max_length=20, default="")
 
 
-
 class Info:
     def __init__(self, ID):
-        Info.id = ID
-        if User.objects.filter(id__exact=Info.id):
-            Info.status = 1  # 用户id已被注册
+        self.status = 0
+        self.id = ID
+        if User.objects.filter(id__exact=self.id):
+            self.status = 1  # 用户id已被注册
         else:
-            Info.status = 2  # id未注册
+            self.status = 2  # id未注册
 
     def get_info(self):
-        user = User.objects.get(id=Info.id)
+        user = User.objects.get(id=self.id)
         data = {
             'id': user.id,
             'name': user.name,
@@ -30,3 +30,12 @@ class Info:
             'identity': user.identity
         }
         return data
+
+    def get_password(self):
+        return User.objects.get(id=self.id).password
+
+    def get_name(self):
+        return User.objects.get(id=self.id).name
+
+    def get_img(self):
+        return User.objects.get(id=self.id).image_path
