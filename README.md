@@ -2,8 +2,8 @@
 
 ![language-python](https://img.shields.io/badge/language-python_3.8.0-brightgreen.svg?style=plastic)  ![大佬-通哥哥](https://img.shields.io/badge/大佬-通哥哥-brightgreen.svg?style=plastic)  
 ## 资料
-[接口文档](/api_design.md)  
-[数据库设计](/mysql_design.md)  
+[接口文档](https://www.showdoc.com.cn/1176615087828011?page_id=5957017455972008)  
+[数据库设计](https://www.showdoc.com.cn/1176615087828011?page_id=5957020180387856)  
 
 
 
